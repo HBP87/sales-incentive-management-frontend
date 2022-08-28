@@ -1,0 +1,30 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Start Amount</th>
+      <th scope="col">End Amount</th>
+      <th scope="col">Interest</th>
+      <th scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let commission of commissionModel; let i = index">
+      <th scope="row">{{ commission.id }}</th>
+      <td>{{ commission.startAmount }}</td>
+      <td [innerHTML]="commission.endAmount | convertInfinity"></td>
+      <td>{{ commission.interest }}%</td>
+      <td>
+        <a
+          routerLink="{{ commission.id }}/edit"
+          mat-raised-button
+          color="primary"
+          >Edit</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div>
+  <router-outlet></router-outlet>
+</div>

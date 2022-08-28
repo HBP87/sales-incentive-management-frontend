@@ -1,0 +1,26 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Location</th>
+      <th scope="col">View</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let salesTeam of salesTeams; let i = index">
+      <th scope="row">{{ salesTeam.id }}</th>
+      <td>{{ salesTeam.name }}</td>
+      <td>{{ salesTeam.location }}</td>
+      <td>
+        <a class="btn btn-accent" routerLink="{{ 'view/' + salesTeam.id }}"
+          >View</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+<div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,34 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Type</th>
+      <th scope="col">Sale</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let vehicle of vehicles; let i = index"
+      class="{{ findClass(vehicle.type) }}"
+    >
+      <th scope="row">{{ vehicle.id }}</th>
+      <td>{{ vehicle.name }}</td>
+      <td>
+        {{ vehicle.cost | price }}
+      </td>
+      <td>{{ vehicle.type | titlecase }}</td>
+      <td>
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="vehicle.isSoldOut"
+          (click)="makeSale(vehicle.id)"
+        >
+          {{ vehicle.isSoldOut ? "Sold Out" : "Sale" }}
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
