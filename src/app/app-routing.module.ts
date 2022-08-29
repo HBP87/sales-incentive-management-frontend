@@ -4,6 +4,7 @@ import { AdminHomeComponent } from './Admin/admin-home/admin-home.component';
 import { CommissionStructureComponent } from './Admin/commission-structure/commission-structure.component';
 import { EditCommissionComponent } from './Admin/commission-structure/edit-commission/edit-commission.component';
 import { OneCommissionStructureComponent } from './Admin/commission-structure/one-commission-structure/one-commission-structure.component';
+import { QuotaComponent } from './Admin/quota/quota.component';
 import { SalesTeamComponent } from './Admin/sales-team/sales-team.component';
 import { ViewSalesTeamComponent } from './Admin/sales-team/view-sales-team/view-sales-team.component';
 import { LoginComponent } from './login/login.component';
@@ -40,6 +41,10 @@ const routes: Routes = [
         children: [
           { path: 'view/:salesTeamId', component: ViewSalesTeamComponent },
         ],
+      },
+      {
+        path: 'quota',
+        component: QuotaComponent,
       },
     ],
   },
