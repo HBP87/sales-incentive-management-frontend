@@ -31,6 +31,7 @@ import { PricePipe } from './pipes/price.pipe';
 import { SalesComponent } from './SalesPerson/sales/sales.component';
 import { SalesReportComponent } from './SalesPerson/sales/sales-report/sales-report.component';
 import { QuotaComponent } from './Admin/quota/quota.component';
+import { EditQuotaComponent } from './Admin/quota/edit-quota/edit-quota.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { QuotaComponent } from './Admin/quota/quota.component';
     SalesComponent,
     SalesReportComponent,
     QuotaComponent,
+    EditQuotaComponent,
   ],
   imports: [
     BrowserModule,

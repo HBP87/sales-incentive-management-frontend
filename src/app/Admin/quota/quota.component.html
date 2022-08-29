@@ -1,1 +1,29 @@
-<p>quota works!</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Location</th>
+      <th scope="col">Quota Amount</th>
+      <th scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let quota of quotas">
+      <th scope="row">{{ quota.id }}</th>
+      <td>{{ quota.location }}</td>
+      <td>{{ quota.quotaAmount | price }}</td>
+      <td>
+        <a
+          mat-raised-button
+          color="primary"
+          routerLink="{{ quota.location + '/edit' }}"
+        >
+          Edit
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div>
+  <router-outlet></router-outlet>
+</div>

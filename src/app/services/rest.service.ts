@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Commission } from '../model/Commission.model';
 import { FullSalesTeam } from '../model/full-sales-team.model';
+import { Quota } from '../model/quota.model';
 import { Sale } from '../model/sale.model';
 import { SalesTeam } from '../model/Sales-team.model';
 import { Vehicle } from '../model/vehicle.model';
@@ -59,5 +60,25 @@ export class RestService {
   getSalesByUsername(username: string) {
     const url = this.baseUrl + '/sales/' + username;
     return this.http.get<Sale[]>(url);
+  }
+
+  getAllQuota() {
+    const url = this.baseUrl + '/quota';
+    return this.http.get<Quota[]>(url);
+  }
+
+  getQuotaByLocation(location: string) {
+    const url = this.baseUrl + '/quota/' + location;
+    return this.http.get<Quota>(url);
+  }
+
+  updateQuota(quotaId: number, newQuotaAmount: number) {
+    const url = this.baseUrl + '/quota/edit';
+    const body = {
+      quotaId: quotaId,
+      newQuotaAmount: newQuotaAmount,
+    };
+
+    return this.http.post<Quota>(url, body);
   }
 }
