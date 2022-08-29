@@ -1,16 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
-
-
-$accent: #673AB7;
+$accent: #673ab7;
 $primary: #ffd740;
 
 $theme-colors: (
   "primary": $primary,
-  "accent": $accent
+  "accent": $accent,
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: rgb(103, 58, 183);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 215, 64, 0.2) 0%,
+    rgba(103, 58, 183, 0.2) 100%
+  );
+}
