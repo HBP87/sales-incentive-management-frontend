@@ -78,7 +78,11 @@ export class RestService {
       quotaId: quotaId,
       newQuotaAmount: newQuotaAmount,
     };
-
     return this.http.post<Quota>(url, body);
+  }
+
+  getQuotaByUsername(username: string) {
+    const url = this.baseUrl + '/quota/user/' + username;
+    return this.http.get<Quota>(url);
   }
 }
