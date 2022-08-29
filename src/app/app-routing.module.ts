@@ -7,6 +7,7 @@ import { OneCommissionStructureComponent } from './Admin/commission-structure/on
 import { SalesTeamComponent } from './Admin/sales-team/sales-team.component';
 import { ViewSalesTeamComponent } from './Admin/sales-team/view-sales-team/view-sales-team.component';
 import { LoginComponent } from './login/login.component';
+import { SalesReportComponent } from './SalesPerson/sales/sales-report/sales-report.component';
 import { SalesComponent } from './SalesPerson/sales/sales.component';
 import { SalespersonHomeComponent } from './SalesPerson/salesperson-home/salesperson-home.component';
 import { VehicleComponent } from './SalesPerson/vehicle/vehicle.component';
@@ -47,7 +48,11 @@ const routes: Routes = [
     component: SalespersonHomeComponent,
     children: [
       { path: 'vehicle', component: VehicleComponent },
-      { path: 'sales', component: SalesComponent },
+      {
+        path: 'sales',
+        component: SalesComponent,
+        children: [{ path: 'report', component: SalesReportComponent }],
+      },
     ],
   },
 ];

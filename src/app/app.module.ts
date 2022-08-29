@@ -29,6 +29,7 @@ import { ViewSalesTeamComponent } from './Admin/sales-team/view-sales-team/view-
 import { VehicleComponent } from './SalesPerson/vehicle/vehicle.component';
 import { PricePipe } from './pipes/price.pipe';
 import { SalesComponent } from './SalesPerson/sales/sales.component';
+import { SalesReportComponent } from './SalesPerson/sales/sales-report/sales-report.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { SalesComponent } from './SalesPerson/sales/sales.component';
     VehicleComponent,
     PricePipe,
     SalesComponent,
+    SalesReportComponent,
   ],
   imports: [
     BrowserModule,

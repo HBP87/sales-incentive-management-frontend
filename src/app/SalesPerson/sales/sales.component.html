@@ -1,11 +1,18 @@
+<div>
+  <button mat-raised-button color="primary" (click)="toggleReport()">
+    {{ isReportShown ? "Close Report" : "Show Report" }}
+  </button>
+</div>
+<router-outlet></router-outlet>
 <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Cost</th>
+      <th scope="col">Vehicle Name</th>
       <th scope="col">Type</th>
-      <th scope="col">Sale</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
     </tr>
   </thead>
   <tbody>
@@ -17,7 +24,10 @@
         {{ sale.amount | price }}
       </td>
       <td>
-        {{ sale.orderDate }}
+        {{ sale.orderDate | date: "longDate" }}
+      </td>
+      <td>
+        {{ sale.orderDate | date: "mediumTime" }}
       </td>
     </tr>
   </tbody>
