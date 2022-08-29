@@ -4,6 +4,7 @@ import { AdminHomeComponent } from './Admin/admin-home/admin-home.component';
 import { CommissionStructureComponent } from './Admin/commission-structure/commission-structure.component';
 import { EditCommissionComponent } from './Admin/commission-structure/edit-commission/edit-commission.component';
 import { OneCommissionStructureComponent } from './Admin/commission-structure/one-commission-structure/one-commission-structure.component';
+import { ExcelComponent } from './Admin/excel/excel.component';
 import { EditQuotaComponent } from './Admin/quota/edit-quota/edit-quota.component';
 import { QuotaComponent } from './Admin/quota/quota.component';
 import { SalesTeamComponent } from './Admin/sales-team/sales-team.component';
@@ -47,6 +48,10 @@ const routes: Routes = [
         path: 'quota',
         component: QuotaComponent,
         children: [{ path: ':location/edit', component: EditQuotaComponent }],
+      },
+      {
+        path: 'upload-report',
+        component: ExcelComponent,
       },
     ],
   },

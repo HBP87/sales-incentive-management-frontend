@@ -32,6 +32,7 @@ import { SalesComponent } from './SalesPerson/sales/sales.component';
 import { SalesReportComponent } from './SalesPerson/sales/sales-report/sales-report.component';
 import { QuotaComponent } from './Admin/quota/quota.component';
 import { EditQuotaComponent } from './Admin/quota/edit-quota/edit-quota.component';
+import { ExcelComponent } from './Admin/excel/excel.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { EditQuotaComponent } from './Admin/quota/edit-quota/edit-quota.componen
     SalesReportComponent,
     QuotaComponent,
     EditQuotaComponent,
+    ExcelComponent,
   ],
   imports: [
     BrowserModule,
